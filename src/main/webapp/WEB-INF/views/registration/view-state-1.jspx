@@ -1,0 +1,25 @@
+<div xmlns:spring="http://www.springframework.org/tags" xmlns:form="http://www.springframework.org/tags/form" xmlns:fn="http://java.sun.com/jsp/jstl/functions" xmlns:util="urn:jsptagdir:/WEB-INF/tags/util" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+  <jsp:directive.page contentType="text/html;charset=UTF-8" />
+  <jsp:output omit-xml-declaration="yes" />
+  <spring:message var="title" code="webflow_state1_title" htmlEscape="false" />
+  <util:panel id="title" title="${title}">
+    <h1>${fn:escapeXml(title)}</h1>
+    <p>
+      <spring:message code="webflow_state1_message" />
+    </p>
+  
+  <form:form modelAttribute="account">
+    <div class="submit">
+   	<table>
+		<tr><td>Username:</td><td><form:input path="username"></form:input> <form:errors path="username"></form:errors></td></tr>
+		<tr><td>Password:</td><td><form:password path="password"></form:password> <form:errors path="password"></form:errors></td></tr>
+	</table>
+        <spring:message var="cancel" code="button_cancel" htmlEscape="false" />
+		<spring:message var="proceed" code="button_proceed" htmlEscape="false" />
+      <input id="cancel" name="_eventId_cancel" value="${fn:escapeXml(cancel)}" type="submit"></input>
+      <input id="success" name="_eventId_success" value="${fn:escapeXml(proceed)}" type="submit"></input>
+    </div>
+  </form:form>
+
+  </util:panel>
+</div>

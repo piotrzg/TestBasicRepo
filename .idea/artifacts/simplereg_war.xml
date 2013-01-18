@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="simplereg:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="simplereg-0.1.0.BUILD-SNAPSHOT.war">
+      <element id="artifact" artifact-name="simplereg:war exploded" />
+    </root>
+  </artifact>
+</component>

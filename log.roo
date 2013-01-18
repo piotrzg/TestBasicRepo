@@ -1,0 +1,22 @@
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-01-08 22:34:07
+project --topLevelPackage com.pace.simplereg
+mongo setup --databaseName demo --host localhost --port 27017
+entity mongo --class ~.domain.Account
+field string --fieldName username --sizeMin 6 --sizeMax 40
+field string --fieldName password --sizeMin 6 --sizeMax 40
+controller all --package ~.web
+web flow --flowName registration
+quit
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-01-08 22:38:40
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-01-08 22:46:24
+repository mongo --interface ~.repository.AccountRepository --entity ~.domain.Account
+quit
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-01-08 22:53:26
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-01-08 23:32:01
+service --interface ~.service.AccountService --entity ~.domain.Account
+quit
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-01-08 23:32:40
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-01-14 21:29:34
+security setup
+quit
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-01-14 23:29:29
